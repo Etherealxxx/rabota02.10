@@ -1,0 +1,56 @@
+
+numbers = input("Введите список чисел, разделенных запятыми: ").split(",")
+numbers = [int(num.strip()) for num in numbers]
+max = max(numbers)
+min = min(numbers)
+#
+print("Наибольшее число в списке:", max)
+print("Наименьшее число в списке:", min)
+
+
+words = ['apple', 'banana', 'orange', 'strawberry', 'watermelon']
+words.sort()
+print(words)
+
+
+
+students = {'Alex' : 19, 'Serega,' : 28, 'Chloe' : 18}
+stud_list = list(students.items())
+#
+print(stud_list)
+
+
+
+text = input("Введите любой текст: ")
+words = text.split()
+unique_slova = set()
+#
+for word in words:
+    unique_slova.add(word)
+#
+print("Уникальные слова: ", unique_slova)
+
+
+
+
+primer1 = set(input("Введите первое множество, разделенное запятыми: ").split(","))
+primer2 = set(input("Введите второе множество, разделенное запятыми: ").split(","))
+#
+mnoshestvo = primer1.intersection(primer2)
+print("Пересеченя:", mnoshestvo)
+
+
+
+Employees = \
+{
+"Киря": {"должность": "Ген.Дир", "зарплата": 150000},
+"Ляу": {"должность": "Программист", "зарплата": 600000},
+"Тимоха": {"должность": "Дворник", "зарплата": 10000},
+"Андрюха": {"должность": "Повар", "зарплата": 10000000},
+"Мариус": {"должность": "Безработный", "зарплата": 0}
+}
+#
+Employees["Димасик"] = {"должность": "Клоун", "зарплата": 80000}
+del Employees["Тимоха"]
+for name, data in Employees.items():
+    print(name, "(", data["должность"], ") - зарплата:", data["зарплата"])
